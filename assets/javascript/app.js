@@ -40,7 +40,7 @@ window.onload = function () {
 
 // Counters for Game
 var numberCorrect = 1;
-var numberIncorrect = 0;
+var numberIncorrect = 1;
 
 // Keep track of correct and incorrect answers
 $("#correctAnswer1, #correctAnswer2").on("click", function () {
@@ -51,11 +51,16 @@ $("#correctAnswer3, #correctAnswer4").on("click", function () {
     console.log(numberCorrect++);
 });
 
+$(".incorrectAnswer").on("click", function () {
+    console.log(numberIncorrect++)
+});
+
+
+
 // Screen when time elapses
-function stop () {
-    console.log("time done")
-    
-}
+// if (oneMinute === 0) {
+//     clearInterval(oneMinute);   
+// }
 
 
 
