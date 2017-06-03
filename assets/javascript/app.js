@@ -1,7 +1,7 @@
 $(document).ready(function() {
     console.log( "ready!" );
-});
 
+// Timer
 function startTimer(duration, display) {
     var start = Date.now(),
         diff,
@@ -37,3 +37,27 @@ window.onload = function () {
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
 };
+
+// Counters for Game
+var numberCorrect = 1;
+var numberIncorrect = 0;
+
+// Keep track of correct and incorrect answers
+$("#correctAnswer1, #correctAnswer2").on("click", function () {
+    console.log(numberCorrect++);
+});
+
+$("#correctAnswer3, #correctAnswer4").on("click", function () {
+    console.log(numberCorrect++);
+});
+
+// Screen when time elapses
+function stop () {
+    console.log("time done")
+    
+}
+
+
+
+
+});
