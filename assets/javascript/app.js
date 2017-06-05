@@ -41,7 +41,8 @@ $(".incorrectAnswer").on("click", function () {
 });
 
 $("#doneButton").on("click", function(){
-    $("#wrapper").empty();
+    var finalCorrect = ("You answered " + numberCorrect + " questions correctly");
+    $("#finalScore").html(finalCorrect);
 })
 
 });
