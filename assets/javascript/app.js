@@ -1,6 +1,3 @@
-$(document).ready(function() {
-    console.log( "ready!" );
-
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     var __timer = setInterval(function () {
@@ -20,10 +17,14 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var fiveMinutes = 60 * 1,
+    var oneMinute = 60 * 1,
         display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
+    startTimer(oneMinute, display);
+    console.log('timer started');
 };
+
+$(document).ready(function() {
+    console.log( "ready!" );
 
 // Counters for Game
 var numberCorrect = 0;
@@ -39,8 +40,9 @@ $(".incorrectAnswer").on("click", function () {
     console.log(numberIncorrect++)
     return numberIncorrect;
 });
-
+// Click Button that ends game and displays final scores
 $("#doneButton").on("click", function(){
+
     var finalCorrect = ("You answered " + numberCorrect + " questions correctly");
     $("#finalScore").html(finalCorrect);
 })

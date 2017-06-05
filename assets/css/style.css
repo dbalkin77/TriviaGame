@@ -1,7 +1,16 @@
-	body {
-		background-image: url('../images/spacejam.jpg');
-		background-size: 100%;
-	}
+		body {
+			background-image: url('../images/spacejam.jpg');
+			background-size: 100%;
+		}
+
+		div {
+			font-size: 24px;
+		}
+
+		#finalScore {
+			color: white;
+			font-weight: bolder;
+		}
 
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");/*!
  * bootswatch v3.3.7
