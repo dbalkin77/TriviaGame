@@ -5,9 +5,12 @@
 	<title>NBA Trivia Game!</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Link to external CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
+
 <body>
 	<div class="container-fluid">
   		<!--Quiz title and time remaining  -->
@@ -18,10 +21,11 @@
   		<!-- Start of Questions -->
   		
   		<!-- Question Group #1 -->
+  	<div id="wrapper">
   		<section>
   		<div class="row text-center">
   		<div class="col-md-12">
-  			<div class="panel-body">
+  			<div class="panel-body" id="finalScore">
     			Who is the NBA Leader in Points Scored?
   			</div>
   		</div>
@@ -123,6 +127,15 @@
 		<label class="radio-inline">
   			<input type="radio" name="inlineRadioOptions" id="inlineRadio3" class="incorrectAnswer" value="option3"> Mugsy Bogues
 		</label>
+	</div>
+	<!-- Finish Button -->
+	<div class="row text-center">
+  		<div class="col-md-12">
+			<p><br><br>
+		  		<button type="button" class="btn btn-primary btn-lg text-center" id="doneButton">Done!</button>
+			</p>
+		</div>
+	</div>
 	</div>
 
 
