@@ -1,6 +1,8 @@
 $(document).ready(function() {
     console.log( "ready!" );
 
+// var oneMinute = ; 
+
 // Timer
 function startTimer(duration, display) {
     var start = Date.now(),
@@ -32,37 +34,37 @@ function startTimer(duration, display) {
     setInterval(timer, 1000);
 }
 
+function stopTimer () {
+    window.clearTimeout(oneMinute)
+    alert('game over!');
+}
+
+// Starts timer when webpage loads
+
 window.onload = function () {
-    var oneMinute = 60 * 1,
+        var oneMinute = 5 * 1,
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
+        if (oneMinute === 0) {
+            stopTimer ();
+        }
 };
+
+
+});
 
 // Counters for Game
 var numberCorrect = 1;
 var numberIncorrect = 1;
 
 // Keep track of correct and incorrect answers
-$("#correctAnswer1, #correctAnswer2").on("click", function () {
-    console.log(numberCorrect++);
-});
-
-$("#correctAnswer3, #correctAnswer4").on("click", function () {
-    console.log(numberCorrect++);
+$(".correctAnswer").on("click", function () {
+    console.log(numberCorrect++)
+    return numberCorrect;
 });
 
 $(".incorrectAnswer").on("click", function () {
     console.log(numberIncorrect++)
+    return numberIncorrect;
 });
 
-
-
-// Screen when time elapses
-// if (oneMinute === 0) {
-//     clearInterval(oneMinute);   
-// }
-
-
-
-
-});
